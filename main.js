@@ -18,6 +18,7 @@ async function randomDadJoke() {
   let data = await response.json();
   let newJoke = document.querySelector("#new-joke");
   newJoke.innerText = data.joke;
+  //console.log(intervalId);
 }
 
 
@@ -123,7 +124,13 @@ ninthListJoke();
 tenthListJoke();
 
 
+function intervalJoke() {  
+//let intervalId = 
+setInterval(randomDadJoke, 5000);
+};
+
+
 document
-  .querySelector("#new-joke-button")
-  .addEventListener("click", randomDadJoke);
+ .querySelector("#new-joke-button")
+ .addEventListener("click", intervalJoke);
 
