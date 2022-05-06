@@ -3,9 +3,9 @@ async function randomDadJoke() {
     headers: { accept: "application/json" },
   });
   let data = await response.json();
-  let newJoke = document.querySelector("#newJoke");
+  let newJoke = document.querySelector("#new-joke");
   newJoke.innerText = data.joke;
 }
 
-randomDadJoke();
+document.querySelector("#new-joke-button").addEventListener("click", randomDadJoke);
 
