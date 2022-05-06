@@ -1,15 +1,11 @@
-let tenTrivia = trivia();
-
-async function trivia(){
-    // fetch 10 random questions
-let response = await fetch("https://opentdb.com/api.php?amount=10");
-let data = await response.json();
-return tenTrivia = data.results[3].category;
+async function randomDadJoke() {
+  let response = await fetch("https://icanhazdadjoke.com/", {
+    headers: { accept: "application/json" },
+  });
+  let data = await response.json();
+  let newJoke = document.querySelector("#newJoke");
+  newJoke.innerText = data.joke;
 }
 
-console.log(tenTrivia);
+randomDadJoke();
 
-//function newTrivia(category){
-  //  let entertainment = tenTrivia.data.results
-   
-//}
