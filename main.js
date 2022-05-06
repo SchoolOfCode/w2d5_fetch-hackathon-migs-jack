@@ -16,7 +16,9 @@ async function randomDadJoke() {
   newJoke.innerText = data.joke;
 }
 
-document.querySelector("#new-joke-button").addEventListener("click", randomDadJoke);
+document
+  .querySelector("#new-joke-button")
+  .addEventListener("click", randomDadJoke);
 
 async function firstJokeList() {
   let response = await fetch("https://icanhazdadjoke.com/", {
@@ -33,3 +35,15 @@ async function firstJokeList() {
 - APPEND ORDERED LISTS WITH TEXT.
 
 */
+
+let extraTips = [
+  "Keep your pennies in a glass jar",
+  "Save money by not eating!",
+  "Don't let your partner know...",
+];
+for (i = 0; i < extraTips.length; i++) {
+  li = document.createElement("li");
+  newTips = document.createTextNode(extraTips[i]);
+  li.appendChild(newTips);
+  document.querySelector("#tips-list").appendChild(li);
+}
