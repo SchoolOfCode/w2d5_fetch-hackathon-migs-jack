@@ -1,7 +1,8 @@
 /*
 X FETCH DAD JOKE
 X CREATE RANDOM DAD JOKE BUTTON
-- CREATE TOP 10 JOKE LIST
+X GENERATE RANDOM DAD JOKE
+X CREATE TOP 10 JOKE LIST 
 - INPUT 10 JOKES INTO LIST (1 0R 10 FUNCTION TO POPULATE)
 - STYLE WITH CSS
 - IF ENOUGH TIME, STRETCH JS MORE 
@@ -20,13 +21,16 @@ document
   .querySelector("#new-joke-button")
   .addEventListener("click", randomDadJoke);
 
-async function firstJokeList() {
+
+
+/* async function firstJokeList() {
   let response = await fetch("https://icanhazdadjoke.com/", {
     headers: { accept: "application/json" },
   });
   let data = await response.json();
   return data.joke;
 }
+*/
 
 /* 
 - GENERATE EACH LIST ELEMENT THEN SAVE IN VARIABLE.
@@ -36,7 +40,7 @@ async function firstJokeList() {
 
 */
 
-let extraTips = [
+/*let extraTips = [
   "Keep your pennies in a glass jar",
   "Save money by not eating!",
   "Don't let your partner know...",
@@ -47,3 +51,5 @@ for (i = 0; i < extraTips.length; i++) {
   li.appendChild(newTips);
   document.querySelector("#tips-list").appendChild(li);
 }
+*/
+
