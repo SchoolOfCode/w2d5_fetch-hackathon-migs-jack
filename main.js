@@ -20,6 +20,42 @@ document
   .querySelector("#new-joke-button")
   .addEventListener("click", randomDadJoke);
 
+  
+document
+  .querySelector("#joke-one")
+  .innerText = "";
+document
+  .querySelector("#joke-two")
+  .innerText = "";
+document
+  .querySelector("#joke-two")
+  .innerText = "";
+document
+  .querySelector("#joke-three")
+  .innerText = "";
+document
+  .querySelector("#joke-four")
+  .innerText = "";
+document
+  .querySelector("#joke-five")
+  .innerText = "";
+document
+  .querySelector("#joke-six")
+  .innerText = "";
+document
+  .querySelector("#joke-seven")
+  .innerText = "";
+document
+  .querySelector("#joke-eight")
+  .innerText = "";
+document
+  .querySelector("#joke-nine")
+  .innerText = "";
+document
+  .querySelector("#joke-ten")
+  .innerText = "";
+
+
 async function firstJokeList() {
   let response = await fetch("https://icanhazdadjoke.com/", {
     headers: { accept: "application/json" },
