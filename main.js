@@ -7,6 +7,9 @@ X CREATE RANDOM DAD JOKE BUTTON
 - IF ENOUGH TIME, STRETCH JS MORE 
 
 */
+
+
+
 async function randomDadJoke() {
   let response = await fetch("https://icanhazdadjoke.com/", {
     headers: { accept: "application/json" },
@@ -16,53 +19,114 @@ async function randomDadJoke() {
   newJoke.innerText = data.joke;
 }
 
+
+async function firstListJoke() {
+    let response = await fetch("https://icanhazdadjoke.com/", {
+      headers: { accept: "application/json" },
+    });
+    let data = await response.json();
+    let listJoke = document.querySelector("#joke-one");
+    listJoke.innerText = data.joke;
+}
+
+async function secondListJoke() {
+    let response = await fetch("https://icanhazdadjoke.com/", {
+      headers: { accept: "application/json" },
+    });
+    let data = await response.json();
+    let listJoke = document.querySelector("#joke-two");
+    listJoke.innerText = data.joke;
+}
+
+async function thirdListJoke() {
+    let response = await fetch("https://icanhazdadjoke.com/", {
+      headers: { accept: "application/json" },
+    });
+    let data = await response.json();
+    let listJoke = document.querySelector("#joke-three");
+    listJoke.innerText = data.joke;
+}
+
+async function fourthListJoke() {
+    let response = await fetch("https://icanhazdadjoke.com/", {
+      headers: { accept: "application/json" },
+    });
+    let data = await response.json();
+    let listJoke = document.querySelector("#joke-four");
+    listJoke.innerText = data.joke;
+}
+
+async function fifthListJoke() {
+    let response = await fetch("https://icanhazdadjoke.com/", {
+      headers: { accept: "application/json" },
+    });
+    let data = await response.json();
+    let listJoke = document.querySelector("#joke-five");
+    listJoke.innerText = data.joke;
+}
+
+async function sixthListJoke() {
+    let response = await fetch("https://icanhazdadjoke.com/", {
+      headers: { accept: "application/json" },
+    });
+    let data = await response.json();
+    let listJoke = document.querySelector("#joke-six");
+    listJoke.innerText = data.joke;
+}
+
+async function seventhListJoke() {
+    let response = await fetch("https://icanhazdadjoke.com/", {
+      headers: { accept: "application/json" },
+    });
+    let data = await response.json();
+    let listJoke = document.querySelector("#joke-seven");
+    listJoke.innerText = data.joke;
+}
+
+async function eigthListJoke() {
+    let response = await fetch("https://icanhazdadjoke.com/", {
+      headers: { accept: "application/json" },
+    });
+    let data = await response.json();
+    let listJoke = document.querySelector("#joke-eight");
+    listJoke.innerText = data.joke;
+}
+
+async function ninthListJoke() {
+    let response = await fetch("https://icanhazdadjoke.com/", {
+      headers: { accept: "application/json" },
+    });
+    let data = await response.json();
+    let listJoke = document.querySelector("#joke-nine");
+    listJoke.innerText = data.joke;
+}
+
+async function tenthListJoke() {
+    let response = await fetch("https://icanhazdadjoke.com/", {
+      headers: { accept: "application/json" },
+    });
+    let data = await response.json();
+    let listJoke = document.querySelector("#joke-ten");
+    listJoke.innerText = data.joke;
+}
+
+firstListJoke();
+secondListJoke();
+thirdListJoke();
+fourthListJoke();
+fifthListJoke();
+sixthListJoke();
+seventhListJoke();
+eigthListJoke();
+ninthListJoke();
+tenthListJoke();
+
+
 document
   .querySelector("#new-joke-button")
   .addEventListener("click", randomDadJoke);
 
-  
-document
-  .querySelector("#joke-one")
-  .innerText = "";
-document
-  .querySelector("#joke-two")
-  .innerText = "";
-document
-  .querySelector("#joke-two")
-  .innerText = "";
-document
-  .querySelector("#joke-three")
-  .innerText = "";
-document
-  .querySelector("#joke-four")
-  .innerText = "";
-document
-  .querySelector("#joke-five")
-  .innerText = "";
-document
-  .querySelector("#joke-six")
-  .innerText = "";
-document
-  .querySelector("#joke-seven")
-  .innerText = "";
-document
-  .querySelector("#joke-eight")
-  .innerText = "";
-document
-  .querySelector("#joke-nine")
-  .innerText = "";
-document
-  .querySelector("#joke-ten")
-  .innerText = "";
 
-
-async function firstJokeList() {
-  let response = await fetch("https://icanhazdadjoke.com/", {
-    headers: { accept: "application/json" },
-  });
-  let data = await response.json();
-  return data.joke;
-}
 
 /* 
 - GENERATE EACH LIST ELEMENT THEN SAVE IN VARIABLE.
@@ -71,15 +135,3 @@ async function firstJokeList() {
 - APPEND ORDERED LISTS WITH TEXT.
 
 */
-
-let extraTips = [
-  "Keep your pennies in a glass jar",
-  "Save money by not eating!",
-  "Don't let your partner know...",
-];
-for (i = 0; i < extraTips.length; i++) {
-  li = document.createElement("li");
-  newTips = document.createTextNode(extraTips[i]);
-  li.appendChild(newTips);
-  document.querySelector("#tips-list").appendChild(li);
-}
