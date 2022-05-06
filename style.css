@@ -4,4 +4,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #54eb7c;
+    line-height: 2em;
   }
